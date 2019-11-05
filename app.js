@@ -1,5 +1,5 @@
 // Form Blur Event Listeners
-document.getElementById('name').addEventListener('blur', validateName);
+document.getElementById('name').addEventListener('blur', validateName);// blur keyboard event. when you click outside the input field is when error will be displayed
 document.getElementById('zip').addEventListener('blur', validateZip);
 document.getElementById('email').addEventListener('blur', validateEmail);
 document.getElementById('phone').addEventListener('blur', validatePhone);
@@ -8,7 +8,7 @@ function validateName() {
   const name = document.getElementById('name');
   const re = /^[a-zA-Z]{2,10}$/; //sarts with either capital or lowrcase a to z with 2 to ten letters
 
-  if(!re.test(name.value)){
+  if(!re.test(name.value)){// if there is no match then
     name.classList.add('is-invalid'); //is-invalid is a bootstrap class that that makes input invalid, you have to validate it yourself a
   } else {
     name.classList.remove('is-invalid');
